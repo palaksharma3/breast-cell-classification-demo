@@ -1,12 +1,14 @@
 # Breast cell classification — educational ML demo
 
-A deployment-ready Streamlit application built from the original Gaussian Naive Bayes project. Visitors can try two public dataset examples or enter all 30 numerical measurements, edit values, and run classification. **This is not an image detector.** It does not accept photographs, scans, or patient documents.
+**[Open the live demo](https://palak-breast-cell-demo.streamlit.app/)** · **[View the source](https://github.com/palaksharma3/breast-cell-classification-demo)**
+
+A publicly deployed Streamlit application built from the original Gaussian Naive Bayes project. Visitors can try two public dataset examples or enter all 30 numerical measurements, edit values, and run classification. **This is not an image detector.** It does not accept photographs, scans, or patient documents.
 
 > **Educational demo only — not for medical diagnosis or treatment.** Predictions can be wrong. Do not use this app for healthcare decisions, screening, or individual risk estimation. A benign model prediction does not establish that someone is healthy.
 
 ## Status
 
-Prepared and tested locally on **4 November 2026**, using **Python 3.12.16**. Source code is public at **[palaksharma3/breast-cell-classification-demo](https://github.com/palaksharma3/breast-cell-classification-demo)** on branch **`main`**. The app is **deployment-ready, not publicly deployed**: there is no public Streamlit app URL yet. Nothing was posted to LinkedIn or a website. The local URL is not accessible to other people over the internet.
+**Deployed publicly on 4 November 2026:** [palak-breast-cell-demo.streamlit.app](https://palak-breast-cell-demo.streamlit.app/). The app was confirmed to load without sign-in in an independent public browser session. Source code is public at **[palaksharma3/breast-cell-classification-demo](https://github.com/palaksharma3/breast-cell-classification-demo)** on branch **`main`**. Local implementation and testing used **Python 3.12.16**. Nothing was posted to LinkedIn or a website. Use the public Streamlit URL when sharing; localhost remains accessible only on this computer.
 
 ## Run the prepared app on this Windows computer
 
@@ -83,9 +85,9 @@ Data origin: features extracted from digitized fine needle aspirate images of br
 - [scikit-learn dataset documentation](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html)
 - [UCI dataset, original feature definitions, and attribution](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic)
 
-## Make it public today: GitHub → Streamlit Community Cloud
+## Deployment and redeployment: GitHub → Streamlit Community Cloud
 
-Streamlit Community Cloud is a practical route for this small Streamlit demo, subject to its current free-tier limits and account terms. The approved public GitHub repository is already prepared. These remaining steps require **you** to approve the hosting connection and deploy the app; GitHub publication alone does not host a running application.
+The app is already live at <https://palak-breast-cell-demo.streamlit.app/> following the approved public deployment. The steps below document how to reproduce the deployment or redeploy a copy; they are not outstanding setup requirements for visiting the live app. Streamlit Community Cloud remains subject to its current free-tier limits and account terms. Any new hosting connection or permission change should be reviewed by the account owner; GitHub publication alone does not host a running application.
 
 ### 1. Use the prepared public repository
 
@@ -107,7 +109,7 @@ The above paths are GitHub/Linux paths; locally, `.streamlit\config.toml` and `t
 
 Do **not** upload `.venv`, `__pycache__`, `.env` files, secrets, logs, or identifiable patient records. `.gitignore` protects normal Git workflows, but is not a substitute for checking browser uploads. The scratch `tempCodeRunnerFile.py` remains untouched locally and is ignored. The original `main.py` may be kept privately as historical work; the tested deployment file list intentionally excludes it so reviewers use the correct app and metrics.
 
-### 2. Deploy on Streamlit Community Cloud
+### 2. Reproduce the Streamlit Community Cloud deployment
 
 1. Open <https://share.streamlit.io> and sign in. Connect the intended GitHub account yourself; review any requested permissions.
 2. Select **Create app** (or the equivalent new-app button), then deploy from GitHub.
@@ -121,18 +123,18 @@ Do **not** upload `.venv`, `__pycache__`, `.env` files, secrets, logs, or identi
 
 Official guide: <https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy>.
 
-### 3. Verify before sharing
+### 3. Verification checklist after deployment or changes
 
 - Open the actual app URL in an **incognito/private window while signed out**. It must load without requesting a login.
 - Run both examples and verify that a result appears without an exception.
 - Try a blank custom case and confirm a useful error appears.
 - Check the evidence tab and educational notice on desktop and phone.
 - If it is private, revisit Sharing. If it will not build, inspect deployment logs, verify the entrypoint and Python 3.12, and check that all required files are on the selected branch.
-- Free hosting may sleep when idle and cold-start on the next visit. This is not a guaranteed-uptime medical service. Once verification succeeds, then describe it as **live**.
+- Free hosting may sleep when idle and cold-start on the next visit. This is not a guaranteed-uptime medical service. Recheck public availability after future deployment or sharing-setting changes.
 
 ### 4. Add it to your portfolio
 
-- **CV:** use the truthful bullet below now. Add the [public repository link](https://github.com/palaksharma3/breast-cell-classification-demo) now; add a public demo URL only after deployment and the incognito check pass.
+- **CV:** use the truthful bullet below with the [live demo](https://palak-breast-cell-demo.streamlit.app/) and [public repository](https://github.com/palaksharma3/breast-cell-classification-demo) links.
 - **LinkedIn:** add a project or Featured link to the actual live URL and, optionally, the repository. No post has been submitted automatically.
 - **Website:** add a “View demo” link to the real URL and a “Source code” link to the real repository. A normal link works without an iframe or changes to your website's infrastructure. Your website has not been changed.
 
@@ -140,17 +142,19 @@ Official guide: <https://docs.streamlit.io/deploy/streamlit-community-cloud/depl
 
 **Project title:** Breast Cell Classification — Gaussian Naive Bayes & Streamlit
 
-**CV bullet (accurate before public deployment):**
+**CV bullet:**
 
-> Built and tested a deployment-ready Streamlit ML demo with 30 validated numerical inputs and public-dataset examples; preserved a reproducible Gaussian Naive Bayes baseline achieving 94.15% accuracy on a 188-sample held-out split, with transparent confusion-matrix reporting and educational-use safeguards.
+> Built, tested, and publicly deployed a Streamlit ML demo with 30 validated numerical inputs and public-dataset examples; preserved a reproducible Gaussian Naive Bayes baseline achieving 94.15% accuracy on a 188-sample held-out split, with transparent confusion-matrix reporting and educational-use safeguards.
 
-**LinkedIn / website summary (before deployment):**
+**LinkedIn / website summary:**
 
-> I built an interactive educational breast-cell classification demo using Python, scikit-learn, and Streamlit. Users can explore public Wisconsin dataset examples or edit 30 numerical features. The app includes input validation, reproducible held-out evaluation, and clear model limitations. It is prepared for Streamlit Community Cloud deployment. This is a portfolio ML demonstration, not a medical diagnostic tool or an image classifier.
+> I built and deployed an interactive educational breast-cell classification demo using Python, scikit-learn, and Streamlit. Users can explore public Wisconsin dataset examples or edit 30 numerical features. The app includes input validation, reproducible held-out evaluation, and clear model limitations. It is available online through Streamlit Community Cloud. This is a portfolio ML demonstration, not a medical diagnostic tool or an image classifier.
+
+Live demo: <https://palak-breast-cell-demo.streamlit.app/>.
 
 Source code: <https://github.com/palaksharma3/breast-cell-classification-demo>.
 
-After public **app** deployment and verification, replace “prepared for Streamlit Community Cloud deployment” with “available online” and append the real demo URL. Do not call it clinically validated, claim diagnostic accuracy, or imply it processes photographs.
+Do not call it clinically validated, claim diagnostic accuracy, or imply it processes photographs. The held-out metrics describe the documented dataset split, not a clinical trial or a new cloud validation study.
 
 ## Privacy and configuration
 
@@ -165,7 +169,9 @@ Set-Location 'C:\Users\Palak Sharma\Desktop\AIML\Cancer cell detection'
 
 **Result on 4 November 2026: 16 tests passed (`Ran 16 tests ... OK`).** Tests use standard-library unittest and Streamlit's bundled AppTest; no separate testing package is required. Coverage includes exact feature ordering even with reversed dictionaries; deterministic training; actual held-out evaluation; class mapping; missing/extra, blank, non-finite, non-numeric, and out-of-range values; all 569 public rows; initial app rendering; both examples; editing; complete custom input; invalid custom input; and clearing results when changing sources. AppTest may print a benign `missing ScriptRunContext` warning when run outside the server.
 
-Static UI detector: no findings. Real server verification returned **HTTP 200** for both `http://127.0.0.1:8501/` and `http://127.0.0.1:8501/_stcore/health` (body: `ok`). All 40 installed packages passed `uv pip check`. The local preview was also opened in the browser canvas. The README documents stable commands rather than embedding a transient process ID.
+Static UI detector: no findings. Real local server verification returned **HTTP 200** for both `http://127.0.0.1:8501/` and `http://127.0.0.1:8501/_stcore/health` (body: `ok`). All 40 installed packages passed `uv pip check`. The local preview was also opened in the browser canvas. The README documents stable commands rather than embedding a transient process ID.
+
+**Public deployment verification on 4 November 2026:** an independent anonymous browser loaded the live app without sign-in (`viewerAuthEnabled=false`, viewer neither owner nor creator). The app iframe's `/~/+/_stcore/health` endpoint returned **HTTP 200, `ok`**. Submitting public example A online produced **“Model prediction: Malignant”** without a Streamlit exception. The public evidence tab showed 381 training / 188 test rows and the documented 94.15% accuracy, 92.42% malignant precision, and 91.04% malignant recall. At iframe viewport widths of **339px and 390px**, no horizontal overflow was observed. Example B is covered by local AppTests; an online example B submission is not claimed. The temporary local preview was stopped after public verification; the commands above remain available to restart it.
 
 ## Files and original preservation
 
@@ -191,4 +197,4 @@ Check preservation at any time:
 Get-FileHash .\main.py -Algorithm SHA256
 ```
 
-The hash was compared again after implementation. Git was initialized for the approved source publication with remote `origin` at <https://github.com/palaksharma3/breast-cell-classification-demo.git> and branch `main`. Only the eight allowlisted application, test, configuration, and documentation files are tracked. Both original scripts and `.venv` remain local and ignored. No hosting account permissions or cloud deployment were performed.
+The hash was compared again after implementation. Git was initialized for the approved source publication with remote `origin` at <https://github.com/palaksharma3/breast-cell-classification-demo.git> and branch `main`. Only the eight allowlisted application, test, configuration, and documentation files are tracked. Both original scripts and `.venv` remain local and ignored. The subsequent user-approved public deployment is available at <https://palak-breast-cell-demo.streamlit.app/>. No LinkedIn posting or website modification was performed.
